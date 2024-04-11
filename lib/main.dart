@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meals/screens/categories.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,10 +20,8 @@ class MainApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.latoTextTheme(),
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+      home: const SafeArea(
+        child: CategoriesScreen(),
       ),
     );
   }
