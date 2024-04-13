@@ -9,11 +9,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Available Categories"),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      appBar: AppBar(title: const Text("Available Categories")),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -21,8 +17,9 @@ class CategoriesScreen extends StatelessWidget {
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-        itemCount: categories.length,
-        itemBuilder: (ctx, index) => CategoryCard(category: categories[index]),
+        itemCount: dummyCategories.length,
+        itemBuilder: (ctx, index) =>
+            CategoryCard(category: dummyCategories[index]),
         padding: const EdgeInsets.all(20),
       ),
     );

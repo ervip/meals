@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/category.dart';
+import 'package:meals/screens/meals.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;
@@ -9,7 +10,11 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => MealsScreen(category: category),
+        ),
+      ),
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15),
       child: Container(
