@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals/data/meals.dart';
 import 'package:meals/models/category.dart';
 import 'package:meals/models/meal.dart';
+import 'package:meals/screens/details.dart';
 
 class MealsScreen extends StatelessWidget {
   final Category category;
@@ -33,7 +34,11 @@ class MealsScreen extends StatelessWidget {
         trailing: Text("⏱\t\t${meals[index].duration} min"),
         titleAlignment: ListTileTitleAlignment.center,
         enableFeedback: true,
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (ctx) => MealDetails(meal: meals[index]),
+          ),
+        ),
       ),
       itemCount: meals.length,
     );
