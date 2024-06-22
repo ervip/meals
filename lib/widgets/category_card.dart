@@ -33,7 +33,7 @@ class CategoryCard extends StatelessWidget {
         child: Text(
           category.name,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
                 fontWeight: FontWeight.bold,
               ),
         ),

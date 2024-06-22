@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
         textTheme: GoogleFonts.latoTextTheme(),
         appBarTheme: const AppBarTheme()
             .copyWith(backgroundColor: themeColorScheme.inversePrimary),
-        scaffoldBackgroundColor: themeColorScheme.background,
+        scaffoldBackgroundColor: themeColorScheme.surface,
       ),
       home: const CategoriesScreen(),
     );

@@ -36,7 +36,7 @@ class MealDetails extends StatelessWidget {
                 Text(
                   "🛒  $ing",
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.onBackground),
+                      color: Theme.of(context).colorScheme.onSurface),
                   softWrap: true,
                 ),
               const SizedBox(height: 24),
@@ -52,7 +52,7 @@ class MealDetails extends StatelessWidget {
                 Text(
                   "${index + 1})  $step",
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.onBackground),
+                      color: Theme.of(context).colorScheme.onSurface),
                   softWrap: true,
                 ),
             ],
